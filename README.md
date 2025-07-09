@@ -1,7 +1,7 @@
 Avatarbook - React User Directory
 =================================
 
-**Avatarbook** is a modern React application that displays a directory of users with their avatar images, names, emails, and university information. Users can search through the directory in real-time to find specific people.
+**Avatarbook** is a  React application that displays a directory of users with their avatar images, names, emails, and university name. Users can search through the directory in real-time to find specific people.
 
 ✨ Features
 ----------
@@ -51,8 +51,6 @@ npm start
 yarn start
 ```
 
-The app should now be running at <http://localhost:3000>
-
 🛠️ Technologies Used
 ---------------------
 
@@ -82,32 +80,6 @@ src/
 └── index.js
 ```
 
-🔧 Component Overview
----------------------
-
-### App Component
-
--   Main component that manages state for users and filtered results
--   Handles API calls to fetch user data
--   Manages search functionality
-
-### SearchBox Component
-
--   Provides real-time search input
--   Triggers filtering based on user's first name
-
-### CardList Component
-
--   Renders a grid of user cards
--   Maps through filtered user data
-
-### Card Component
-
--   Individual user card displaying:
-    -   Avatar image (generated from user ID)
-    -   First name
-    -   Email address
-    -   University information
 
 🌐 API Integration
 ------------------
@@ -119,17 +91,6 @@ The application uses two APIs:
 2.  **RoboHash API** - `https://robohash.org/{id}.png?set=set5&size=150x150`
     -   Generates unique avatar images based on user ID
 
-✅ Future Improvements
----------------------
-
--   Add user detail modal/page
--   Implement additional search filters (email, university)
--   Add sorting options (alphabetical, university)
--   Implement pagination for large datasets
--   Add loading states and error handling
--   Include user's additional information (phone, address, etc.)
--   Add dark mode toggle
--   Implement favorites/bookmarks functionality
 
 📄 License
 ----------
