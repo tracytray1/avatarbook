@@ -1,12 +1,143 @@
-# React + Vite
+Avatarbook - React User Directory
+=================================
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Avatarbook** is a modern React application that displays a directory of users with their avatar images, names, emails, and university information. Users can search through the directory in real-time to find specific people.
 
-Currently, two official plugins are available:
+✨ Features
+----------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   👥 **User Directory** displaying profiles with avatar images
+-   🔍 **Real-time Search** filter users by first name
+-   🤖 **Dynamic Avatars** generated using RoboHash API
+-   📱 **Responsive Design** works on all screen sizes
+-   ⚡ **Fast Performance** with React functional components and hooks
 
-## Expanding the ESLint configuration
+📸 Preview
+----------
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+<!-- Add a screenshot of your application here -->
+
+🚀 Getting Started
+------------------
+
+### Installation
+
+1.  Clone the repository:
+
+bash
+
+```
+git clone https://github.com/your-username/avatarbook.git
+cd avatarbook
+```
+
+1.  Install dependencies:
+
+bash
+
+```
+npm install
+# or
+yarn install
+```
+
+1.  Start the development server:
+
+bash
+
+```
+npm start
+# or
+yarn start
+```
+
+The app should now be running at <http://localhost:3000>
+
+🛠️ Technologies Used
+---------------------
+
+-   **React** (with Hooks - useState, useEffect)
+-   **CSS** (custom styling)
+-   **JavaScript** (ES6+)
+-   **DummyJSON API** (for user data)
+-   **RoboHash API** (for avatar generation)
+
+📁 Project Structure
+--------------------
+
+```
+src/
+├── components/
+│   ├── Card/
+│   │   ├── Card.js
+│   │   └── Card.css
+│   ├── CardList/
+│   │   ├── CardList.js
+│   │   └── CardList.css
+│   └── SearchBox/
+│       ├── SearchBox.js
+│       └── SearchBox.css
+├── App.js
+├── App.css
+└── index.js
+```
+
+🔧 Component Overview
+---------------------
+
+### App Component
+
+-   Main component that manages state for users and filtered results
+-   Handles API calls to fetch user data
+-   Manages search functionality
+
+### SearchBox Component
+
+-   Provides real-time search input
+-   Triggers filtering based on user's first name
+
+### CardList Component
+
+-   Renders a grid of user cards
+-   Maps through filtered user data
+
+### Card Component
+
+-   Individual user card displaying:
+    -   Avatar image (generated from user ID)
+    -   First name
+    -   Email address
+    -   University information
+
+🌐 API Integration
+------------------
+
+The application uses two APIs:
+
+1.  **DummyJSON Users API** - `https://dummyjson.com/users`
+    -   Provides user data including names, emails, and universities
+2.  **RoboHash API** - `https://robohash.org/{id}.png?set=set5&size=150x150`
+    -   Generates unique avatar images based on user ID
+
+✅ Future Improvements
+---------------------
+
+-   Add user detail modal/page
+-   Implement additional search filters (email, university)
+-   Add sorting options (alphabetical, university)
+-   Implement pagination for large datasets
+-   Add loading states and error handling
+-   Include user's additional information (phone, address, etc.)
+-   Add dark mode toggle
+-   Implement favorites/bookmarks functionality
+
+📄 License
+----------
+
+This project is open-source and available under the MIT License.
+
+🙌 Acknowledgements
+-------------------
+
+-   [DummyJSON](https://dummyjson.com/) for providing the user data API
+-   [RoboHash](https://robohash.org/) for generating unique avatar images
